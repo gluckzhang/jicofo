@@ -264,6 +264,12 @@
       <version>${jersey.version}</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>1.4.12</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
