@@ -1,0 +1,7 @@
+FROM openjdk:11.0.8-jdk-slim
+
+COPY ./jicofo /home/jicofo
+COPY ./glowroot /home/jicofo/glowroot
+
+COPY ./jicofo-for-pankti.sh /home/jicofo/jicofo.sh
+ENTRYPOINT ["/home/jicofo/jicofo.sh"]
