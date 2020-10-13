@@ -6,7 +6,7 @@ public class TestJitsiMeetConfigPanktiGen {
     static XStream xStream = new XStream();
 
     @Test
-    public void testUseRoomAsSharedDocName1() {
+    public void testUseRoomAsSharedDocName1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -29,14 +29,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<boolean>false</boolean>";
-        boolean expectedObject = (Boolean) xStream.fromXML(returnedXML);
         Assert.assertEquals(false, receivingObject.useRoomAsSharedDocName());
     }
 
     @Test
-    public void testIsLipSyncEnabled1() {
+    public void testIsLipSyncEnabled1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -66,7 +63,7 @@ public class TestJitsiMeetConfigPanktiGen {
     }
 
     @Test
-    public void testIsOctoEnabled1() {
+    public void testIsOctoEnabled1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -89,14 +86,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<boolean>false</boolean>";
-        boolean expectedObject = (Boolean) xStream.fromXML(returnedXML);
         Assert.assertEquals(false, receivingObject.isOctoEnabled());
     }
 
     @Test
-    public void testGetMinParticipants1() {
+    public void testGetMinParticipants1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -119,14 +113,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<int>2</int>";
-        int expectedObject = (Integer) xStream.fromXML(returnedXML);
         Assert.assertEquals(2, receivingObject.getMinParticipants());
     }
 
     @Test
-    public void testGetStartAudioMuted1() {
+    public void testGetStartAudioMuted1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -156,7 +147,7 @@ public class TestJitsiMeetConfigPanktiGen {
     }
 
     @Test
-    public void testGetStartVideoMuted1() {
+    public void testGetStartVideoMuted1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -186,7 +177,7 @@ public class TestJitsiMeetConfigPanktiGen {
     }
 
     @Test
-    public void testGetEnforcedVideobridge1() {
+    public void testGetEnforcedVideobridge1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -216,7 +207,7 @@ public class TestJitsiMeetConfigPanktiGen {
     }
 
     @Test
-    public void testGetChannelLastN1() {
+    public void testGetChannelLastN1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -246,7 +237,7 @@ public class TestJitsiMeetConfigPanktiGen {
     }
 
     @Test
-    public void testGetAudioPacketDelay1() {
+    public void testGetAudioPacketDelay1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -276,7 +267,7 @@ public class TestJitsiMeetConfigPanktiGen {
     }
 
     @Test
-    public void testIsRtxEnabled1() {
+    public void testIsRtxEnabled1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -299,14 +290,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<boolean>true</boolean>";
-        boolean expectedObject = (Boolean) xStream.fromXML(returnedXML);
         Assert.assertEquals(true, receivingObject.isRtxEnabled());
     }
 
     @Test
-    public void testStereoEnabled1() {
+    public void testStereoEnabled1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -329,14 +317,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<boolean>false</boolean>";
-        boolean expectedObject = (Boolean) xStream.fromXML(returnedXML);
         Assert.assertEquals(false, receivingObject.stereoEnabled());
     }
 
     @Test
-    public void testGetOpusMaxAverageBitrate1() {
+    public void testGetOpusMaxAverageBitrate1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -359,14 +344,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<int>-1</int>";
-        int expectedObject = (Integer) xStream.fromXML(returnedXML);
         Assert.assertEquals(-1, receivingObject.getOpusMaxAverageBitrate());
     }
 
     @Test
-    public void testIsTccEnabled1() {
+    public void testIsTccEnabled1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -389,14 +371,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<boolean>true</boolean>";
-        boolean expectedObject = (Boolean) xStream.fromXML(returnedXML);
         Assert.assertEquals(true, receivingObject.isTccEnabled());
     }
 
     @Test
-    public void testGetMinBitrate1() {
+    public void testGetMinBitrate1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -419,14 +398,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<int>-1</int>";
-        int expectedObject = (Integer) xStream.fromXML(returnedXML);
         Assert.assertEquals(-1, receivingObject.getMinBitrate());
     }
 
     @Test
-    public void testGetStartBitrate1() {
+    public void testGetStartBitrate1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -449,14 +425,11 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<int>800</int>";
-        int expectedObject = (Integer) xStream.fromXML(returnedXML);
         Assert.assertEquals(800, receivingObject.getStartBitrate());
     }
 
     @Test
-    public void testIsRembEnabled1() {
+    public void testIsRembEnabled1() throws Exception {
         String receivingXML = 
         "<org.jitsi.jicofo.JitsiMeetConfig>" +
         "  <properties>" +
@@ -479,9 +452,6 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<boolean>false</boolean>";
-        boolean expectedObject = (Boolean) xStream.fromXML(returnedXML);
         Assert.assertEquals(false, receivingObject.isRembEnabled());
     }
 }
