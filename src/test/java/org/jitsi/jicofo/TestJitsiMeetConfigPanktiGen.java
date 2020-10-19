@@ -140,10 +140,7 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<null/>";
-        java.lang.Integer expectedObject = (java.lang.Integer) xStream.fromXML(returnedXML);
-        Assert.assertEquals(expectedObject, receivingObject.getStartAudioMuted());
+        Assert.assertEquals(null, receivingObject.getStartAudioMuted());
     }
 
     @Test
@@ -170,10 +167,7 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<null/>";
-        java.lang.Integer expectedObject = (java.lang.Integer) xStream.fromXML(returnedXML);
-        Assert.assertEquals(expectedObject, receivingObject.getStartVideoMuted());
+        Assert.assertEquals(null, receivingObject.getStartVideoMuted());
     }
 
     @Test
@@ -200,10 +194,7 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<null/>";
-        org.jxmpp.jid.Jid expectedObject = (org.jxmpp.jid.Jid) xStream.fromXML(returnedXML);
-        Assert.assertEquals(expectedObject, receivingObject.getEnforcedVideobridge());
+        Assert.assertEquals(null, receivingObject.getEnforcedVideobridge());
     }
 
     @Test
@@ -260,10 +251,7 @@ public class TestJitsiMeetConfigPanktiGen {
         "  </properties>" +
         "</org.jitsi.jicofo.JitsiMeetConfig>";
         org.jitsi.jicofo.JitsiMeetConfig receivingObject = (org.jitsi.jicofo.JitsiMeetConfig) xStream.fromXML(receivingXML);
-        String returnedXML = 
-        "<null/>";
-        java.lang.Integer expectedObject = (java.lang.Integer) xStream.fromXML(returnedXML);
-        Assert.assertEquals(expectedObject, receivingObject.getAudioPacketDelay());
+        Assert.assertEquals(null, receivingObject.getAudioPacketDelay());
     }
 
     @Test
