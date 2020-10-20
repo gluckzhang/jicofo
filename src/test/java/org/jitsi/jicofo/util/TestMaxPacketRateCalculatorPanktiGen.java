@@ -1,87 +1,40 @@
 package org.jitsi.jicofo.util;
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 import org.junit.Assert;
 import org.junit.Test;
 public class TestMaxPacketRateCalculatorPanktiGen {
-    static XStream xStream = new XStream();
+    static XStream xStream = new XStream(new JettisonMappedXmlDriver());
 
     @Test
     public void testComputeSenderIngressPacketRatePps1() throws Exception {
-        String receivingXML = 
-        "<org.jitsi.jicofo.util.MaxPacketRateCalculator>" +
-        "  <numberOfConferenceBridges>4</numberOfConferenceBridges>" +
-        "  <numberOfGlobalSenders>20</numberOfGlobalSenders>" +
-        "  <numberOfSpeakers>2</numberOfSpeakers>" +
-        "  <numberOfLocalSenders>20</numberOfLocalSenders>" +
-        "  <numberOfLocalReceivers>5</numberOfLocalReceivers>" +
-        "  <maxPacketRatePps>" +
-        "    <int>50</int>" +
-        "    <int>70</int>" +
-        "    <int>90</int>" +
-        "    <int>280</int>" +
-        "  </maxPacketRatePps>" +
-        "</org.jitsi.jicofo.util.MaxPacketRateCalculator>";
-        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingXML);
+        String receivingObjectStr = 
+        "{\"org.jitsi.jicofo.util.MaxPacketRateCalculator\":{\"numberOfConferenceBridges\":4,\"numberOfGlobalSenders\":20,\"numberOfSpeakers\":2,\"numberOfLocalSenders\":20,\"numberOfLocalReceivers\":5,\"maxPacketRatePps\":{\"int\":[50,70,90,280]}}}";
+        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingObjectStr);
         Assert.assertEquals(490, receivingObject.computeSenderIngressPacketRatePps());
     }
 
     @Test
     public void testComputeIngressPacketRatePps1() throws Exception {
-        String receivingXML = 
-        "<org.jitsi.jicofo.util.MaxPacketRateCalculator>" +
-        "  <numberOfConferenceBridges>4</numberOfConferenceBridges>" +
-        "  <numberOfGlobalSenders>20</numberOfGlobalSenders>" +
-        "  <numberOfSpeakers>2</numberOfSpeakers>" +
-        "  <numberOfLocalSenders>20</numberOfLocalSenders>" +
-        "  <numberOfLocalReceivers>5</numberOfLocalReceivers>" +
-        "  <maxPacketRatePps>" +
-        "    <int>50</int>" +
-        "    <int>70</int>" +
-        "    <int>90</int>" +
-        "    <int>280</int>" +
-        "  </maxPacketRatePps>" +
-        "</org.jitsi.jicofo.util.MaxPacketRateCalculator>";
-        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingXML);
+        String receivingObjectStr = 
+        "{\"org.jitsi.jicofo.util.MaxPacketRateCalculator\":{\"numberOfConferenceBridges\":4,\"numberOfGlobalSenders\":20,\"numberOfSpeakers\":2,\"numberOfLocalSenders\":20,\"numberOfLocalReceivers\":5,\"maxPacketRatePps\":{\"int\":[50,70,90,280]}}}";
+        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingObjectStr);
         Assert.assertEquals(9800, receivingObject.computeIngressPacketRatePps());
     }
 
     @Test
     public void testComputeParticipantEgressPacketRatePps1() throws Exception {
-        String receivingXML = 
-        "<org.jitsi.jicofo.util.MaxPacketRateCalculator>" +
-        "  <numberOfConferenceBridges>4</numberOfConferenceBridges>" +
-        "  <numberOfGlobalSenders>20</numberOfGlobalSenders>" +
-        "  <numberOfSpeakers>2</numberOfSpeakers>" +
-        "  <numberOfLocalSenders>20</numberOfLocalSenders>" +
-        "  <numberOfLocalReceivers>5</numberOfLocalReceivers>" +
-        "  <maxPacketRatePps>" +
-        "    <int>50</int>" +
-        "    <int>70</int>" +
-        "    <int>90</int>" +
-        "    <int>280</int>" +
-        "  </maxPacketRatePps>" +
-        "</org.jitsi.jicofo.util.MaxPacketRateCalculator>";
-        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingXML);
+        String receivingObjectStr = 
+        "{\"org.jitsi.jicofo.util.MaxPacketRateCalculator\":{\"numberOfConferenceBridges\":4,\"numberOfGlobalSenders\":20,\"numberOfSpeakers\":2,\"numberOfLocalSenders\":20,\"numberOfLocalReceivers\":5,\"maxPacketRatePps\":{\"int\":[50,70,90,280]}}}";
+        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingObjectStr);
         Assert.assertEquals(1640, receivingObject.computeParticipantEgressPacketRatePps());
     }
 
     @Test
     public void testComputeEgressPacketRatePps1() throws Exception {
-        String receivingXML = 
-        "<org.jitsi.jicofo.util.MaxPacketRateCalculator>" +
-        "  <numberOfConferenceBridges>4</numberOfConferenceBridges>" +
-        "  <numberOfGlobalSenders>20</numberOfGlobalSenders>" +
-        "  <numberOfSpeakers>2</numberOfSpeakers>" +
-        "  <numberOfLocalSenders>20</numberOfLocalSenders>" +
-        "  <numberOfLocalReceivers>5</numberOfLocalReceivers>" +
-        "  <maxPacketRatePps>" +
-        "    <int>50</int>" +
-        "    <int>70</int>" +
-        "    <int>90</int>" +
-        "    <int>280</int>" +
-        "  </maxPacketRatePps>" +
-        "</org.jitsi.jicofo.util.MaxPacketRateCalculator>";
-        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingXML);
+        String receivingObjectStr = 
+        "{\"org.jitsi.jicofo.util.MaxPacketRateCalculator\":{\"numberOfConferenceBridges\":4,\"numberOfGlobalSenders\":20,\"numberOfSpeakers\":2,\"numberOfLocalSenders\":20,\"numberOfLocalReceivers\":5,\"maxPacketRatePps\":{\"int\":[50,70,90,280]}}}";
+        org.jitsi.jicofo.util.MaxPacketRateCalculator receivingObject = (org.jitsi.jicofo.util.MaxPacketRateCalculator) xStream.fromXML(receivingObjectStr);
         Assert.assertEquals(41000, receivingObject.computeEgressPacketRatePps());
     }
 }
